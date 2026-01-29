@@ -7,14 +7,26 @@
 <html>
    <head>
         <title> My super awesome first website!!!</title>
+        <meta name="author" content="Korinne Ciechon">
+        <meta name="description" content="This website was used to learn html.">
+        <meta name="keywords" content="html, food, learning">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
    </head> 
    <body>
       <header>
          <h1>My awesome website</h1>
-         <nav></nav>
+         <nav>
+            <ul>
+               <li><a href="page2.html">page2</a></li>
+               <li><a href="#section2">Section 2</a></li>
+               <li><a href="#section3">Section 3</a></li>
+               
+            </ul>
+         </nav>
       </header>
       <main>
-         <section>
+         <section id="section2">
             <h2>Heading 2</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                Eveniet labore illum, nihil expedita doloremque magni voluptatem mollitia inventore hic dolorum culpa corrupti aperiam quas non incidunt omnis molestias eius quo. 
@@ -28,7 +40,7 @@
                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam nostrum eligendi libero voluptas delectus nobis quis, necessitatibus, earum, molestias quod labore odio officiis a. Pariatur eveniet voluptatibus at inventore maxime.
             </p>
          </section>
-         <section>
+         <section id="section3">
             <h3>What's for dinner?</h3>
             <ol>
                <li>Sushi</li>
@@ -49,6 +61,20 @@
                </li>
                <li>Ice Cream</li>
             </ul>
+         </section>
+         <section>
+            <h4> Inline Tag</h4>
+            <p>This tag is <strong>strong</strong>.</p>
+            <p>This tag is <em>emphasized</em>.</p>
+            <p>This tag is <b>bold</b>.</p>
+            <p>This tag is <i>italics</i>.</p>
+            <p>This link connect to <a href="http://www.miami.edu">miami.edu</a>. This link is an absolute link.</p>
+            <p> This <a href="page2.html">goes to page 2</a></p>
+            <p> This is a relative link to our <a href="images/Akera.JPG"
+            targets="_blank">image</a> </p>
+            <!--blank will ioen link in another tab-->
+            <p>An image is an inline tag <img src="images/Akera.JPG" alt="Akera"></p>
+            <p>Alt image tag <img alt="Akera"></p>
          </section>
 
       </main>
