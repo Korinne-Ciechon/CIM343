@@ -1,0 +1,125 @@
+/* is your multi line comment */
+/* variable examples */
+:root{
+    --content-background-color: rgba(255,255,255, 0.85);
+    --pagewidth: 960px;
+}
+
+/*
+/* reset some default browser styles */
+* {
+    /*
+    margin: 0; 
+    padding: 0;
+    */
+    box-sizing: border-box; /* The CSS box-sizing property allows us to include the padding and  */
+    
+}
+
+
+body{
+    background-color: cornflowerblue;
+}
+header{
+    /* background-color: rgba(255,255,255,0.75); */
+    background-color: var(--content-background-color);
+    /* width: 960px; */
+    width: var(--pagewidth);
+    /* width: 80%;*/ 
+
+    /* padding and border add to the dimensions of the containers */
+    padding: 20px;
+    /* Add 20px of padding top tight bottom left edges */
+    border: 5px;
+    border-style: solid;
+    border-color: blue;
+    /* margin-top: -7 gets you to the top of the border */
+    margin-top: -7px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header > p{
+    text-align: center;
+    font-family: cursive;
+    /* display: inline-block; */
+}
+
+nav{
+
+}
+
+nav > ul {
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    justify-items: center; /* moving them as a block start(left), center, end(right */
+    align-content: center; /* start (top), center, end(bottom) */
+    align-items: center;
+}
+
+nav > ul > li {
+    padding: 30px;
+    list-style: none;
+    background-color: aquamarine;
+
+
+}
+
+nav > ul > li > a{
+    color:black;
+    font-size: 20px;
+    font-family: serif;
+    text-decoration: none;
+    
+}
+
+nav > ul > li > a:hover{
+    background-color: green;
+}
+
+main{
+    background-color: rgba(255,255,255,0.75);
+    width: var(--pagewidth);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top-width: 10px;
+    border-top-style: dotted;
+    border-top-color: white;
+    margin: 0px auto;
+    /* margin: top/bottom left/right */
+
+}
+
+footer{
+    background-color: rgba(255,255,255,0.75);
+    width: var(--pagewidth);
+    height: 20px;
+    border: 10px solid green; 
+    padding: 20px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+h1{
+    /* background-color: #333333; */
+    color: #777777; /*changes the text color*/
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* adding a , adds the property to all of the ones that it has */
+h2, h3{
+    font-family: sans-serif; /* serif, sans-serif, monospace, fantasy, cursive */
+}
+
+h2{
+    color: green;
+}
