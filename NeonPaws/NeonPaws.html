@@ -1,4 +1,4 @@
-<!--ORDERED AND UNORDERED LISTS-->
+<!--LABEL TAG?-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,10 +13,11 @@
     <body>
         <header>
             <h1>Neon Paws</h1>
+            <p><img src="neonlogo.png" alt="Logo" style="width: 100%; height: auto;"></p>
             <!-- <nav> <ul> <li>a add the navigation, once things are all set </a> </li>   </nav> -->
             <nav>
             <ul>
-               <li><a href="section1">Echo-City and Its Solution</a></li>
+               <li><a href="#section1">Echo-City and Its Solution</a></li> 
                <li><a href="#section2">About Neon-Paws</a></li>
                <li><a href="#section3">Contact</a></li>
                <li><a href="#section4">Learn About Some of Our Pets</a></li>
@@ -29,9 +30,8 @@
         <hr>
         
         <main>
-            <!-- later add the id="" to in the <section> -->
             <section id="section1">
-                <h2>Echo-City and Its Solution </h2>
+                <h2>Echo-City and Its Solution</h2>
                 <h3>The problem</h3>
                 <p> It is the year 2088, where real nature is gone and the hyper-urbanization of Echo-City, a place filled with shadows, tall buildings, and reflected neon light, leaves the city with plenty of technology but very little companionship. 
                     Real animals had become a luxury of the past, that have become preserved in high-security bio-domes.  
@@ -54,43 +54,43 @@
             <section id="section3">
                 <h2>Contact</h2>
                 <p>Ready to bring life back into your home? 
-                    If you want to adopt a Neon Paw, begin you Bio-Sync session by calling our Integration Specialists at <a href="tel:18006366729">1-800-NEON-PAW.</a> 
+                    If you want to adopt a Neon Paw, begin you <code>Bio-Sync Algorithm</code> by calling our Integration Specialists at <a href="tel:18006366729">1-800-NEON-PAW.</a> 
                     Our technicians are standing by in Echo-City to help you find your new compainion.</p>
             </section>
             <hr>
             <section id="section4">
                 <h2>Learn About Some of Our Pets</h2>
+                <!--Picture of the pets together and then when learning more about them, have the picture of just them-->
                 <p>Discover the unique companions that are waiting for a home in Echo-City!</p>
                 <p><img src="NeonPaws.png" alt="Paws"></p>
-                
-                <section>
-                    <h3>Pixel (The Bit-Fox)</h3>
-                    <p>A small, hovering companion that displays emojis to match your mood.</p>
-                    <p><strong>Vibe:</strong> Playful and Energetic</p>
-                    <p> Learn more about Pixel <a href="pixel.html"> here.</a></p>
-                </section>
-
-                <section>
-                    <h3>Aqua, the Hydro-Cat</h3>
-                    <p>Aqua is a liquid-based bio-chimera designed for owners who prefer a calm, stoic presence in their home.</p>
-                    <p><strong>Vibe:</strong> Calm & Fluid</p>
-                    <p> Learn more about Aqua <a href="aqua.html"> here.</a></p>
-                </section>
-
-                <section>
-                    <h3>Rusty (Titan-Pup) </h3>
-                    <p>Rusty isn't just a pet; he is a shield. 
-                        His presence brings a sense of security to any Echo-City apartment. 
-                        He doesn't hover or flow—he stands his ground.</p>
-                    <p><strong>Vibe:</strong> Brave & Protective</p>
-                    <p> Learn more about Rusty <a href="rusty.html"> here.</a></p>
-                </section>
-                
+                <ol>
+                    <li><h3>Pixel (The Bit-Fox)</h3>
+                        <ul>
+                            <li>A small, hovering companion that displays emojis to match your mood.</li>
+                            <li><strong>Vibe:</strong> Playful and Energetic</li>
+                            <li>Learn more about Pixel <a href="pixel.html"> here.</a></li>
+                        </ul>
+                    </li>
+                    <li><h3>Aqua, the Hydro-Cat</h3>
+                        <ul>
+                            <li>Aqua is a liquid-based bio-chimera designed for owners who prefer a calm, stoic presence in their home.</li>
+                            <li><strong>Vibe:</strong> Calm & Fluid</li>
+                            <li>Learn more about Aqua <a href="aqua.html"> here.</a></li>
+                        </ul>
+                    </li>
+                    <li><h3>Rusty (Titan-Pup) </h3>
+                        <ul>
+                            <li>Rusty isn't just a pet; he is a shield. 
+                                His presence brings a sense of security to any Echo-City apartment. 
+                                He doesn't hover or flow—he stands his ground.</li>
+                            <li><strong>Vibe:</strong> Brave & Protective</li>
+                            <li>Learn more about Rusty <a href="rusty.html"> here.</a></li>
+                        </ul>
+                    </li>
+                </ol>                
             </section>
-
         </main>
         <footer>
-
         </footer>
     </body>
 </html>
