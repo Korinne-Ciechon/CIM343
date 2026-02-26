@@ -45,9 +45,6 @@ header > p{
     /* display: inline-block; */
 }
 
-nav{
-
-}
 
 nav > ul {
     width: 600px;
@@ -56,10 +53,10 @@ nav > ul {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
     justify-content: center;
     justify-items: center; /* moving them as a block start(left), center, end(right */
-    align-content: center; /* start (top), center, end(bottom) */
+    align-content: end; /* start (top), center, end(bottom) */
     align-items: center;
 }
 
@@ -113,6 +110,9 @@ h1{
     color: #777777; /*changes the text color*/
     text-align: center;
     text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: italic;
 }
 
 /* adding a , adds the property to all of the ones that it has */
@@ -122,4 +122,63 @@ h2, h3{
 
 h2{
     color: green;
+}
+ /* find class grid1; add the period */
+ /* this instance, makes 3 columns next to eachother */
+.grid1{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.grid2{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* have more control when using px demenations for gid-template-; and not fr */
+/* justify-content */
+    /* space-between spaces them from each side and then spaces them out equally with left and right on margins */
+    /* space-evenly takes entire space and spaces out on the entire thing   */
+    /*start, center, end -- send to left, center, and right; like in docs when do each one */
+.grid3{
+    height: 400px;
+    display: grid;
+    grid-template-rows: 300px;
+    grid-template-columns: 200px 200px 200px;
+    gap: 20px;
+    justify-content:end;
+    align-content: start;
+    align-items: end; 
+    background-color: blueviolet;
+}
+
+.grid3 p{
+    background-color: aliceblue;
+
+}
+
+/* id's are meant to be used once; so generally better to use classes */
+#section2{
+    color:firebrick;
+    background-color:blanchedalmond;
+}
+
+.grid4{
+    display: grid;
+    grid-template-rows: auto auto;
+    /* grid-template-rows: 1fr 1fr; */ /*do auto auto for space descreprences */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* adjusting image (generally only adjust either width or height) */
+.grid4 img{
+    width: 100%;  /* 100% of parent container it is in */ 
+    
+    /* height: 400px; */ /* bc it is set to hr, the content of image is larger, so it is taking the priority, over the container it is in (superceeds fitting nice in the container */
+
 }

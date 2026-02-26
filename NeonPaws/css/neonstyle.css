@@ -1,0 +1,174 @@
+:root{
+    --content-background-color: rgba(169, 205, 239, 0.85);
+    --pagewidth: 960px;
+}
+
+* {
+    /*
+    margin: 0; 
+    padding: 0;
+    */
+    box-sizing: border-box; /* The CSS box-sizing property allows us to include the padding and  */
+    
+}
+
+body{
+    background-color: rgb(223, 201, 245);
+}
+
+header{
+    /* background-color: rgba(255,255,255,0.75); */
+    background-color: var(--content-background-color);
+    /* width: 960px; */
+    width: var(--pagewidth);
+    /* width: 80%;*/ 
+
+    /* padding and border add to the dimensions of the containers */
+    padding: 20px;
+    /* Add 20px of padding top tight bottom left edges */
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    /* margin-top: -7 gets you to the top of the border */
+    margin-top: -7px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header > p{
+    text-align: center;
+    font-family: cursive;
+    /* display: inline-block; */
+}
+
+main{
+    background-color: rgba(255,255,255,0.75);
+    width: var(--pagewidth);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top-width: 10px;
+    border-top-color: white;
+    margin: 0px auto;
+    
+    /* margin: top/bottom left/right */
+
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    /*background-color: #ffffff;*/
+    color: #000000; /*changes the text color*/
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(204, 0, 255, 0.5); /* adds a shadow effect to the text */
+}
+h2{
+    /* background-color: #333333; */
+    /*text-transform: uppercase;*/
+    font-family: 'Orbitron', sans-serif;
+    color: #000000; /*changes the text color*/
+    text-shadow: 2px 2px 5px rgba(204, 0, 255, 0.5); /* adds a shadow effect to the text */
+}
+
+h3{
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin:20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+
+nav > ul > li > a{
+    color:black;
+    font-size: 14px;
+    font-family: serif;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    /*adds smooth color transition*/
+    transition: 0.3s;
+    
+}
+/* color when you hover over the links */
+nav > ul > li > a:hover{
+    background-color:#cc00ff;
+    color: white;
+    box-shadow: 0 0 10px #cc00ff;
+}
+
+.aboutpets{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch;
+    list-style-type: none;
+    padding: 0;
+    gap: 20px;
+}
+
+
+
+.aboutpets img{
+    width: 100%;  /* 100% of parent container it is in */ 
+    height: 200px;
+    object-fit: cover; /* cover the entire container, cropping if necessary */
+    border-radius: 10px;
+    border: 2px solid #cc00ff;
+    margin-top: auto; /* centers the image vertically within its container */
+    align-self: flex-end;;
+
+}
+
+.aboutpets > li{
+    background-color: rgba(255,255,255,0.5);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cc00ff;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.aboutpets > li > ul{
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.aboutpets >h3{
+    margin-top: 0;
+    font-size: 18px;
+    color: #cc00ff;
+}
+
+
+.problem{
+    display: block;
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+    border-left: 5px solid #cc00ff;
+    margin-top: 20px 0;
+    /*grid-template-rows: auto;
+    grid-template-columns: 1fr 5fr;
+    gap: 30px; */
+}
+
+.problem h3{
+    color: #333;
+    margin-bottom: 5px;
+    font-variant: small-caps;
+}
+
+section#section4 > p > img {
+    border: 3px solid #cc00ff;
+    box-shadow: 0 0 15px rgba(204, 0, 255, 0.5);
+    border-radius: 5px;
+}

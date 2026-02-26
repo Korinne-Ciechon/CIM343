@@ -1,0 +1,12 @@
+.clickBox{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.showHideContainer{
+    width: 300px;
+    height: 150px;
+    background-color: light-gray;
+    visibility: hidden;
+}
