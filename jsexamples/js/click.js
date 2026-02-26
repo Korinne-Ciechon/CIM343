@@ -19,6 +19,7 @@ redClickBox.addEventListener("mouseout", function(){
 });
 
 let showButton = document.getElementById("show");
+let hideButton = document.getElementById("hide");
 
 let showHideBox = document.getElementById("showHideBox");
 
@@ -26,10 +27,21 @@ showButton.addEventListener("click", function(){
     showHideBox.style.visibility = "visible";
 });
 
-let hideButton = document.getElementById("hide");
-
-let showHideBox2 = document.getElementById("showHideBox2");
 
 hideButton.addEventListener("click", function(){
-    showHideBox2.style.visibility = "hidden";
-}); 
+    showHideBox.style.visibility = "hidden";
+});
+
+let toggle = false;
+
+let toggleButton = document.getElementById("toggle");
+
+toggleButton.addEventListener("click", function(){
+    if(toggle == false){
+        showHideBox.style.visibility = "visible";
+        toggle = true;
+    } else {
+        showHideBox.style.visibility = "hidden";
+        toggle = false;
+    }
+});

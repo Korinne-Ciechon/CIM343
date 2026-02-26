@@ -7,6 +7,6 @@
 .showHideContainer{
     width: 300px;
     height: 150px;
-    background-color: light-gray;
+    background-color: lightgray;
     visibility: hidden;
 }
