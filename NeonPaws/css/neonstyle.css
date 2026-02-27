@@ -15,32 +15,19 @@
 body{
     background-color: rgb(223, 201, 245);
 }
-
+/* Styling the header, main, and footer */
 header{
-    /* background-color: rgba(255,255,255,0.75); */
     background-color: var(--content-background-color);
-    /* width: 960px; */
     width: var(--pagewidth);
-    /* width: 80%;*/ 
-
-    /* padding and border add to the dimensions of the containers */
     padding: 20px;
-    /* Add 20px of padding top tight bottom left edges */
     border: 5px;
     border-style: solid;
     border-color: rgb(255, 255, 255);
-    /* margin-top: -7 gets you to the top of the border */
     margin-top: -7px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
 }
-header > p{
-    text-align: center;
-    font-family: cursive;
-    /* display: inline-block; */
-}
-
 main{
     background-color: rgba(255,255,255,0.75);
     width: var(--pagewidth);
@@ -51,41 +38,44 @@ main{
     border-top-width: 10px;
     border-top-color: white;
     margin: 0px auto;
-    
-    /* margin: top/bottom left/right */
-
+}
+footer{
+    background-color: rgba(169, 205, 239, 0.85);
+    width: var(--pagewidth);
+    height: auto;
+    border: 5px solid #ffffff; 
+    padding: 20px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+/* Styling the text headers and font  */
+header > p{
+    text-align: center;
+    font-family: cursive;
 }
 
+h1, h2, h3{
+    font-family: 'Orbitron', sans-serif;
+    color: #000000; 
+}
 h1{
     text-transform: uppercase;
-    font-family: 'Orbitron', sans-serif;
-    /*background-color: #ffffff;*/
-    color: #000000; /*changes the text color*/
     text-align: center;
     text-shadow: 2px 2px 5px rgba(204, 0, 255, 0.5); /* adds a shadow effect to the text */
 }
 h2{
-    /* background-color: #333333; */
-    /*text-transform: uppercase;*/
-    font-family: 'Orbitron', sans-serif;
-    color: #000000; /*changes the text color*/
     text-shadow: 2px 2px 5px rgba(204, 0, 255, 0.5); /* adds a shadow effect to the text */
 }
 
-h3{
-    font-family: 'Orbitron', sans-serif;
-}
-
+/* Styling the navigation bar */
 nav > ul {
     list-style-type: none;
     padding: 0;
     margin:20px 0;
-    display: flex;
+    display: flex; /* used flex instead of grid*/
     justify-content: center;
     gap: 8px;
 }
-
-
 
 nav > ul > li > a{
     color:black;
@@ -96,8 +86,8 @@ nav > ul > li > a{
     border: 1px solid transparent;
     /*adds smooth color transition*/
     transition: 0.3s;
-    
 }
+
 /* color when you hover over the links */
 nav > ul > li > a:hover{
     background-color:#cc00ff;
@@ -105,6 +95,8 @@ nav > ul > li > a:hover{
     box-shadow: 0 0 10px #cc00ff;
 }
 
+
+/* Styling the About Pets Section */
 .aboutpets{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -112,19 +104,6 @@ nav > ul > li > a:hover{
     list-style-type: none;
     padding: 0;
     gap: 20px;
-}
-
-
-
-.aboutpets img{
-    width: 100%;  /* 100% of parent container it is in */ 
-    height: 200px;
-    object-fit: cover; /* cover the entire container, cropping if necessary */
-    border-radius: 10px;
-    border: 2px solid #cc00ff;
-    margin-top: auto; /* centers the image vertically within its container */
-    align-self: flex-end;;
-
 }
 
 .aboutpets > li{
@@ -143,22 +122,29 @@ nav > ul > li > a:hover{
     margin-bottom: 20px;
 }
 
+.aboutpets img{
+    width: 100%;  
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 10px;
+    border: 2px solid #cc00ff;
+    margin-top: auto; 
+    align-self: flex-end;
+}
+
 .aboutpets >h3{
     margin-top: 0;
     font-size: 18px;
     color: #cc00ff;
 }
 
-
+/* Styling the Problem Section */
 .problem{
     display: block;
     background: rgba(255,255,255,0.5);
     padding: 20px;
     border-left: 5px solid #cc00ff;
-    margin-top: 20px 0;
-    /*grid-template-rows: auto;
-    grid-template-columns: 1fr 5fr;
-    gap: 30px; */
+    margin-top: 20px;
 }
 
 .problem h3{
@@ -171,4 +157,50 @@ section#section4 > p > img {
     border: 3px solid #cc00ff;
     box-shadow: 0 0 15px rgba(204, 0, 255, 0.5);
     border-radius: 5px;
+}
+
+/* Styling Pet Profiles Pages */
+
+.pet-profile{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 20px; 
+    margin: 20px auto;
+    max-width: var(--pagewidth);
+}
+
+.pet-profile img{
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    border: 3px solid #cc00ff;
+    box-shadow: 0 0 15px rgba(204, 0, 255, 0.5);
+}
+
+.pet-profile h1{
+    margin-top: 0;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 2px 2px 5px rgba(204, 0, 255, 0.5);
+}
+
+/* Styling the Gallery Section */
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #cc00ff;
+    box-shadow: 0 0 10px rgba(204, 0, 255, 0.5);
 }
