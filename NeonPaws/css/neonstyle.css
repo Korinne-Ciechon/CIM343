@@ -1,20 +1,17 @@
 :root{
     --content-background-color: rgba(169, 205, 239, 0.85);
-    --pagewidth: 960px;
+    --pagewidth: 100%;
 }
 
 * {
-    /*
-    margin: 0; 
-    padding: 0;
-    */
-    box-sizing: border-box; /* The CSS box-sizing property allows us to include the padding and  */
+    box-sizing: border-box; 
     
 }
 
 body{
     background-color: rgb(223, 201, 245);
 }
+
 /* Styling the header, main, and footer */
 header{
     background-color: var(--content-background-color);
@@ -72,7 +69,9 @@ nav > ul {
     list-style-type: none;
     padding: 0;
     margin:20px 0;
-    display: flex; /* used flex instead of grid*/
+    display: grid; 
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     gap: 8px;
 }
@@ -86,6 +85,8 @@ nav > ul > li > a{
     border: 1px solid transparent;
     /*adds smooth color transition*/
     transition: 0.3s;
+    display: block;
+    text-align: center;
 }
 
 /* color when you hover over the links */
@@ -99,6 +100,7 @@ nav > ul > li > a:hover{
 /* Styling the About Pets Section */
 .aboutpets{
     display: grid;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: stretch;
     list-style-type: none;
@@ -124,12 +126,10 @@ nav > ul > li > a:hover{
 
 .aboutpets img{
     width: 100%;  
-    height: 200px;
     object-fit: cover; 
     border-radius: 10px;
     border: 2px solid #cc00ff;
     margin-top: auto; 
-    align-self: flex-end;
 }
 
 .aboutpets >h3{
@@ -140,7 +140,10 @@ nav > ul > li > a:hover{
 
 /* Styling the Problem Section */
 .problem{
-    display: block;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 30px;
     background: rgba(255,255,255,0.5);
     padding: 20px;
     border-left: 5px solid #cc00ff;
@@ -174,7 +177,6 @@ section#section4 > p > img {
 
 .pet-profile img{
     width: 250px;
-    height: 250px;
     border-radius: 15px;
     border: 3px solid #cc00ff;
     box-shadow: 0 0 15px rgba(204, 0, 255, 0.5);
@@ -198,7 +200,6 @@ section#section4 > p > img {
 
 .gallery img{
     width: 100%;
-    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #cc00ff;

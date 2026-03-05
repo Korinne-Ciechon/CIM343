@@ -1,0 +1,56 @@
+@import "neonstyle.css";
+
+header{
+    width: 100%;
+}
+
+nav{
+    margin-top: 20px;
+}
+
+nav > ul{
+    width: 100%;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    height: auto;  
+}
+main{
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+footer{
+    width: 100%;
+}
+
+/*Grid 1: about pets section*/
+.aboutpets{
+    display: block;
+}
+
+.aboutpets > li{
+    margin-bottom: 20px;
+}
+
+/*grid 2: problem section*/
+.problem{
+    grid-template-columns: 1fr;
+}
+
+/*grid 3: gallery section */
+
+.gallery{
+    display: block;
+} 
+
+/*pet profile: stack image above text*/
+.pet-profile{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.pet-profile img{
+    width: 100%;
+    height: auto;}

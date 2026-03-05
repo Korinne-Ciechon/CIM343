@@ -10,10 +10,9 @@ nav{
 }
 
 nav > ul{
-    width: 100%;
-    height:auto;
-    grid-template-rows: auto auto auto;
+    display: grid;
     grid-template-columns: 1fr;
+    height: auto;
 }
 main{
     width: 100%;
