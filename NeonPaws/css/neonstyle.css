@@ -125,11 +125,11 @@ nav > ul > li > a:hover{
 }
 
 .aboutpets img{
-    width: 100%;  
+    width: 250px;
+    height: 250px;  
     object-fit: cover; 
     border-radius: 10px;
     border: 2px solid #cc00ff;
-    margin-top: auto; 
 }
 
 .aboutpets >h3{
@@ -200,8 +200,72 @@ section#section4 > p > img {
 
 .gallery img{
     width: 100%;
+    max-width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    border: 3px solid #cc00ff;
+    box-shadow: 0 0 15px rgba(204, 0, 255, 0.5);
+}
+
+/* adding js */
+.active-tab {
+    background-color: #cc00ff;
+    color: white;
+    box-shadow: 0 0 10px #cc00ff;
+    border-color: white;
+}
+
+.hologram-focus img{
+    transform: scale(1.05);
+}
+
+.tabcontent img{
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #cc00ff;
-    box-shadow: 0 0 10px rgba(204, 0, 255, 0.5);
+    display: block;
+    margin-top: 20px;
+    margin: 20px auto 15px auto;
+}
+
+.imageGallery{
+    text-align: center;
+}
+
+
+.imageGallery figcaption{
+    margin-top: 10px;
+}
+
+.imageGallery img{
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #cc00ff;
+    display: block;
+    margin: 0 auto 15px auto;    
+}
+
+/* used Gemini to know how to change the boxes */
+button{
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid #cc00ff;
+    background-color: transparent;
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #cc00ff;
+    color: white;
+    box-shadow: 0 0 10px #cc00ff;
 }

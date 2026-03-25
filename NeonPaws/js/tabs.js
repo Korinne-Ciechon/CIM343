@@ -19,7 +19,14 @@ tabLinks.forEach(button => {
         tabContent.forEach(tab => {
             tab.style.display = "none";
         });
+        tabLinks.forEach(button => {
+            button.classList.remove("active-tab");
+        });
+        button.classList.add("active-tab");
         let currentButton = button.innerHTML;
+
+        let titleElement = document.getElementById("tab-title");
+        titleElement.innerHTML = currentButton;
         document.getElementById(currentButton).style.display = "block";
     });
 });
