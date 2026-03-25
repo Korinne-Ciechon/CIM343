@@ -23,10 +23,10 @@ const qa = [
     }
 ];
 
-let currentQuestion = 0;
+let currentQuestion = nextQuestion();
 let score = 0;
-console.log(qa[currentQuestion].question);
-document.getElementById("question").innerHTML = qa[currentQuestion].question;
+//console.log(qa[currentQuestion].question);
+document.getElementById("question").innerHTML = currentQuestion.question;
 
 //Pseudocode
 //when i press submit, check for the answer, correct or incorrect, go to the next question, 
@@ -50,22 +50,26 @@ submitButton.addEventListener("click", function() {
     //     nextQuestion();
     //     updateQuestion();
     // }
-    if(checkAnswer() == true){
-        increaseScore();
-        nextQuestion();
-        updateQuestion();
-    } else {
-        decreaseScore();
-        nextQuestion();
-        updateQuestion();
-    }
+    // if(currentQuestion != null) {
+        if(checkAnswer(currentQuestion.answer) == true){
+            increaseScore();
+            currentQuestion = nextQuestion();
+            updateQuestion();
+        } else {
+            decreaseScore();
+            currentQuestion = nextQuestion();
+            updateQuestion();
+        }
+    // } else {
+    //     document.getElementById("question").innerHTML = "Game Over!";
+    // }
 
 });
 
 function checkAnswer() {
     const selected = document.querySelector('input[name="option"]:checked');
     console.log(selected.value);
-    if(selected.value == qa[currentQuestion].answer) {
+    if(selected.value == currentQuestion.answer) {
         return true;
     } else {
         return false;
@@ -74,31 +78,39 @@ function checkAnswer() {
 
 function nextQuestion() {
     //currentQuestion = currentQuestion + 1;
-    currentQuestion++;
-    if(currentQuestion == qa.length) {
-        currentQuestion = 0;
+    // currentQuestion++;
+    // if(currentQuestion == qa.length) {
+    //     currentQuestion = 0;
+    // }
+    if(qa.length > 0) {
+        return qa.pop();
+    } else {
+        return null;
     }
-
 }
 
 function popQuestion() {
-
+    
 }
 
 function updateQuestion() {
-    document.getElementById("question").innerHTML = qa[currentQuestion].question;
+    if(currentQuestion != null) {
+        document.getElementById("question").innerHTML = currentQuestion.question;
+    } else {
+        document.getElementById("question").innerHTML = "Game Over!";
+    }
 }
 
 function increaseScore() {
     score++;
     result.innerHTML = "Correct Score: " + score;
-    setTimeout(clearResult, 3000);
+    //setTimeout(clearResult, 3000);
 }
 
 function decreaseScore() {
     score--;
     result.innerHTML = "Incorrect Score: " + score;
-    setTimeout(clearResult, 3000);
+    //setTimeout(clearResult, 3000);
 }
 
 function clearResult() {

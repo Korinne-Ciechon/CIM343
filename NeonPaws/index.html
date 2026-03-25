@@ -20,6 +20,8 @@
         
         <link rel="stylesheet" href="css/neonstyle.css" media="only screen and (min-width:481px)">
         <link rel="stylesheet" href="css/mobile.css" media="only screen and (max-width:480px)">
+        <script src="js/tabs.js" defer></script>
+        <script src="js/imagegallery.js" defer></script>
         
     </head>
     <body>
@@ -76,27 +78,62 @@
                 <!--Picture of the pets together and then when learning more about them, have the picture of just them-->
                 <p>Discover the unique companions that are waiting for a home in Echo-City!</p>
                 <p><img src="images/NeonPaws.png" alt="Paws"></p>
-                <ol class="aboutpets">
+
+                <h1>Some of Our Pets</h1>
+                <div class="tabs">
+                    <button class="tablinks">Pixel, the Bit-Fox</button>
+                    <button class="tablinks">Aqua, the Hydro-Cat</button>
+                    <button class="tablinks">Rusty, the Titan-Pup</button>
+                </div>
+
+                <div id="Pixel, the Bit-Fox" class="tabcontent">
+                    <h3>Pixel, the Bit-Fox</h3>
+                    <p>Pixel is a small, hovering companion that displays emojis to match your mood.</p>
+                    <p><strong>Vibe:</strong> Playful and Energetic</p>
+                    <p>Learn more about Pixel <a href="pixel.html"> here.</a></p>
+                    <img src="images/pixel.png" alt="Learn more about Pixel">
+                        
+                </div>
+
+                <div id="Aqua, the Hydro-Cat" class="tabcontent">
+                    <h3>Aqua, the Hydro-Cat</h3>
+                    <p>Aqua is a liquid-based bio-chimera designed for owners who prefer a calm, stoic presence in their home.</p>
+                    <p><strong>Vibe:</strong> Calm and Fluid</p>
+                    <p>Learn more about Aqua <a href="aqua.html"> here.</a></p>
+                    <img src="images/aqua.png" alt="Learn more about Aqua">
+                </div>
+
+                <div id="Rusty, the Titan-Pup" class="tabcontent">
+                    <h3>Rusty, the Titan-Pup</h3>
+                    <p>Rusty isn't just a pet; he is a shield. 
+                        His presence brings a sense of security to any Echo-City apartment.</p>
+                    <p><strong>Vibe:</strong> Brave and Protective</p>
+                    <p>Learn more about Rusty <a href="rusty.html"> here.</a></p>
+                    <img src="images/rusty.png" alt="Learn more about Rusty">
+                </div>
+    
+                
+                <!-- <ol class="aboutpets">
                     
                     <li><h3>Pixel (The Bit-Fox)</h3>
                         <ul>
                             <li>Pixel is a small, hovering companion that displays emojis to match your mood.</li>
                             <li><strong>Vibe:</strong> Playful and Energetic</li>
                             <li>Learn more about Pixel <a href="pixel.html"> here.</a></li>
-                        </ul>
+                        </ul> -->
                         <!--<p><img src="pixel.png" alt="Pixel"></p> -->
-                        <a href="pixel.html">
+                        <!-- <a href="pixel.html">
                             <img src="images/pixel.png" alt="Learn more about Pixel">
-                        </a>
+                        </a> 
                     </li>
                     <li><h3>Aqua, the Hydro-Cat</h3>
                         <ul>
                             <li>Aqua is a liquid-based bio-chimera designed for owners who prefer a calm, stoic presence in their home.</li>
                             <li><strong>Vibe:</strong> Calm and Fluid</li>
                             <li>Learn more about Aqua <a href="aqua.html"> here.</a></li>
-                        </ul>
+                        </ul> -->
                         <!--<p><img src="aqua.png" alt="Aqua"></p> -->
-                        <a href="aqua.html">
+                        <!--<a href="aqua.html">
                             <img src="images/aqua.png" alt="Learn more about Aqua">
                         </a>
                     </li>
@@ -106,16 +143,37 @@
                                 His presence brings a sense of security to any Echo-City apartment.</li>
                             <li><strong>Vibe:</strong> Brave and Protective</li>
                             <li>Learn more about Rusty <a href="rusty.html"> here.</a></li>
-                        </ul>
+                        </ul> -->
                         <!--<p><img src="rusty.png" alt="Rusty"></p> -->
-                        <a href="rusty.html">
+                        <!--<a href="rusty.html">
                             <img src="images/rusty.png" alt="Learn more about Rusty">
                         </a>
                     </li>
-                </ol>
+                </ol> -->
             </section>
             <hr>
+
             <section>
+                <h1>Pet Hologram Gallery</h1>
+                <button id="previous">Previous</button>
+                <button id="next">Next</button>
+                <button id="start">start</button>
+                <button id="stop">stop</button>
+                <figure id="Pixel" class="imageGallery">
+                    <img src="images/pixel.png" alt="Pixel" >
+                    <figcaption ><strong>PIXEL:</strong> A small, hovering Bit-Fox with a digital heart.</figcaption>
+                </figure>
+                <figure id="Aqua" class="imageGallery">
+                    <img  src="images/aqua.png" alt="Aqua" >
+                    <figcaption ><strong>AQUA:</strong> A rare Hydro-Cat made of living digital liquid.</figcaption>
+                </figure>
+                <figure id="Rusty" class="imageGallery">
+                    <img src="images/rusty.png" alt="Rusty">
+                    <figcaption ><strong>RUSTY:</strong> An industrial-grade Titan-Pup built for loyalty.</figcaption>
+                </figure>
+            </section> 
+
+            <!-- <section>
                 <h2>Pet Hologram Gallery</h2>
                 <div class="gallery">
                 <figure>
@@ -138,7 +196,7 @@
                     <figcaption><strong>NEONPAWS PETS:</strong> Neon Paws that are currently available for adoption in Echo-City.</figcaption>
                 </figure>
                 </div>
-            </section>
+            </section> -->
         </main>
         <footer>
         </footer>
