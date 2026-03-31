@@ -8,13 +8,142 @@
         <!-- below important -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="css/london.css">
+        <script src="js/tabs.js" defer></script>
+        <script src="js/form.js" defer></script>
+         <script src="js/quiz.js" defer></script>
         
    </head> 
 
    <body>
       <header>
          <h1>Welcome to Your London Guide</h1>
-         <p><img src="images/london.jpg" alt="Logo"></p>
+         <nav>
+            <ul>
+               <li><a href="#about">About</a></li>
+               <li><a href="#explorer">Explore London Neighborhoods</a></li>
+               <li><a href="#section3">Section 3</a></li>
+               
+            </ul>
+         </nav>
       </header>
+      
+      <main>
+         <section id="about">
+            <img src="images/london.jpg" alt="London">
+            <div class="about text">
+               <h2>Your Master's Journey Starts Here</h2>
+               <p>Welcome to your London guide! Here you will find all the information you need to study in London.</p>
+            </div>
+         </section>
+         <hr>
+         <section id="explorer">
+            <h2 id="tab-title">Explore Your Future Neighborhoods</h2>
+            <p>Click a neighborhood to learn more!</p>
+
+            <div class="explorer-grid">
+
+               <div class="tabs-column">
+                  <button class="tablinks">Bloomsbury</button>
+                  <button class="tablinks">Camden</button>
+                  <button class="tablinks">Shoreditch</button>
+               </div>
+
+               <div class="content-column">
+                  <div id="Bloomsbury" class="tabcontent">
+                     <div class="inner-grid"> 
+                        <div class="text">
+                           <h3>Bloomsbury: The Academic Hub</h3>
+                           <p>Bloomsbury is perfect for a quiet study.Home to UCL and the British Museum.</p>
+                           <p><strong>Vibe:</strong> Intellectual and Historic</p>
+                        </div>
+                        <img src="images/ucl.jpg" alt="UCL campus in Bloomsbury">
+                     </div>
+                  </div>
+                  <div id="Camden" class="tabcontent">
+                     <div class="inner-grid"> 
+                        <div class="text">
+                           <h3>Camden: The Creative District</h3>
+                           <p>Camden is known for its vibrant arts, markets, and alternative music scene.</p>
+                           <p><strong>Vibe:</strong> Bohemian and Creative</p>
+                        </div>
+                        <img src="images/camden.jpg" alt="Camden Market">
+                     </div>
+                  </div>
+                  <div id="Shoreditch" class="tabcontent">
+                     <div class="inner-grid"> 
+                        <div class="text">
+                           <h3>Shoreditch: The Trendy Corner</h3>
+                           <p>Shoreditch is a hub for young professionals and creatives.</p>
+                           <p><strong>Vibe:</strong> Modern and Dynamic</p>
+                        </div>
+                        <img src="images/shoreditch.jpg" alt="A trendy street in Shoreditch">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section id="prep">
+            <h2>Student Prep & Packing</h2>
+            <p>Plan your move to London and pack your essentials!</p>
+            <p>Select a category and item to see your preparation checklist.</p>
+
+            <form class="prep-form">
+               <label>Item Name:</label>
+               <input type="text" id="myText" name="item-name" placeholder="e.g. Passport">
+
+               <br>
+               <label>Quantity:</label>
+               <input type="number" id="myNumber" name="quantity" placeholder="e.g. 2">
+
+               <br>
+               <label>Category:</label>
+               <select id="mySelect">
+                  <option value="lightblue">Documents (Blue)</option>
+                  <option value="lightpink">Clothing (Pink)</option>
+                  <option value="lightpurple">Electronics (Purple)</option>
+                  <option value="lightgreen">Other (Green)</option>
+               </select>
+               <br>
+
+               <button type="button" id="myButton">Generate Packing List</button>
+            </form>
+            <div id="output" class="prep-output"></div>
+         </section>
+
+         <section id="quiz">
+            <h2>Test Your London Knowledge</h2>
+            <div id="quiz-container">
+               <p id="question">What is the name of the famous clock tower in London?</p>
+               <form id="optionsForm">
+                  <label><input type="radio" name="option" value="Big Ben">
+                     Big Ben
+                  </label>
+                  <label>
+                     <input type="radio" name="option" value="The Tube">
+                     The Tube
+                  </label>
+                  <label>
+                     <input type="radio" name="option" value="Left">
+                     Left
+                  </label>
+                  <label>
+                     <input type="radio" name="option" value="Buckingham Palace">
+                     Buckingham Palace
+                  </label>
+                  <label><input type="radio" name="option" value="UCL">
+                     UCL
+                  </label>
+               </form>
+               <button type="button" id="submit">Submit</button>
+               <div id="result"></div>
+            </div>
+
+         </section>
+
+      </main>
+      <footer></footer>
    </body>
 </html>

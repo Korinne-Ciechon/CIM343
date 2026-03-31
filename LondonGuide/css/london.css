@@ -1,0 +1,274 @@
+:root{
+    --content-background-color: rgba(255,255,255, 0.85);
+    
+}
+
+* {
+    
+    box-sizing: border-box; /* The CSS box-sizing property allows us to include the padding and  */
+    
+}
+
+body{
+    background-color: rgb(246, 198, 205);
+}
+header{
+    background-color: var(--content-background-color);
+    width: var(--pagewidth);
+    padding: 20px;
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header > h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+
+nav > ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    justify-items: center; 
+}
+
+
+nav > ul > li > a{
+    color:black;
+    font-size: 20px;
+    font-family: serif;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: 0.3s;    
+}
+
+nav > ul > li > a:hover{
+    background-color: rgb(233, 113, 189);
+    color: white;
+    border-radius: 3px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+main{
+    background-color: rgba(255,255,255,0.75);
+    width: var(--pagewidth);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top-width: 10px;
+    border-top-color: white;
+    margin: 0px auto;
+}
+
+
+
+
+
+/* nav > ul > li > a{
+    color:black;
+    font-size: 14px;
+    font-family: serif;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    display: block;
+    text-align: center;
+}
+
+nav > ul > li > a:hover{
+    background-color:#cc00ff;
+    color: white;
+    box-shadow: 0 0 10px #cc00ff;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.explorer-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.tabs-column {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tablinks{
+    padding: 15px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    font-weight: bold;
+
+}
+
+.tablinks:hover {
+    background-color: #ddd;
+}
+
+.inner-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.inner-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* Styling the packing list*/
+.prep-form {
+    background-color: var(--content-background-color);
+    padding: 30px;
+    border: 3px solid white;
+    width: var(--pagewidth);
+    margin: 20px auto;
+}
+
+.prep-form label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.prep-output {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.prep-output div {
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+}
+
+.prep-form input, 
+.prep-form select {
+    padding: 8px;
+    margin-bottom: 15px; /* Adds breathing room between rows */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#myButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgb(233, 113, 189);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#myButton:hover {
+    background-color: rgb(210, 90, 160);
+}
+
+.box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    padding:10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 2px solid white;
+
+}
+
+#quiz-container {
+    background-color: var(--content-background-color);
+    padding: 30px;
+    border: 3px solid white;
+    width: var(--pagewidth);
+    margin: 20px auto;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#optionsForm label {
+    display: block;
+    background: white;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#optionsForm label:hover {
+    background-color: #fff0f5;
+
+}
+#submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#submit:hover {
+    background-color: rgb(233, 113, 189);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
