@@ -9,8 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" href="css/london.css">
-        <script src="js/tabs.js" defer></script>
+         <link rel="stylesheet" href="css/london.css" media= "only screen and (min-width: 481px)">
+         <link rel="stylesheet" href="css/mobile.css" media= "only screen and (max-width: 480px)">        
+         <script src="js/tabs.js" defer></script>
         <script src="js/form.js" defer></script>
          <script src="js/quiz.js" defer></script>
         
@@ -21,9 +22,9 @@
          <h1>Welcome to Your London Guide</h1>
          <nav>
             <ul>
-               <li><a href="#about">About</a></li>
                <li><a href="#explorer">Explore London Neighborhoods</a></li>
-               <li><a href="#section3">Section 3</a></li>
+               <li><a href="#prep">Packing List</a></li>
+               <li><a href="#quiz">Quiz</a></li>
                
             </ul>
          </nav>
@@ -34,7 +35,11 @@
             <img src="images/london.jpg" alt="London">
             <div class="about text">
                <h2>Your Master's Journey Starts Here</h2>
-               <p>Welcome to your London guide! Here you will find all the information you need to study in London.</p>
+               <p>Moving to London for your Master's? 
+                  You have came to the right place. 
+                  Transitioning to a new city can be overwhelming, but we have simplified the process.
+                  From exploring the unique personalities of London's top student neighborhoods to creating a personalized packing list, this guide is your one-stop resource for a successful move.
+                  Your jounrney to academic excellence and unforgettable experiences in London starts here!</p>
             </div>
          </section>
          <hr>
@@ -84,7 +89,7 @@
                </div>
             </div>
          </section>
-
+         <hr>
          <section id="prep">
             <h2>Student Prep & Packing</h2>
             <p>Plan your move to London and pack your essentials!</p>
@@ -103,7 +108,7 @@
                <select id="mySelect">
                   <option value="lightblue">Documents (Blue)</option>
                   <option value="lightpink">Clothing (Pink)</option>
-                  <option value="lightpurple">Electronics (Purple)</option>
+                  <option value="mediumpurple">Electronics (Purple)</option>
                   <option value="lightgreen">Other (Green)</option>
                </select>
                <br>
@@ -112,7 +117,7 @@
             </form>
             <div id="output" class="prep-output"></div>
          </section>
-
+         <hr>
          <section id="quiz">
             <h2>Test Your London Knowledge</h2>
             <div id="quiz-container">
@@ -140,7 +145,48 @@
                <button type="button" id="submit">Submit</button>
                <div id="result"></div>
             </div>
-
+         </section>
+         <hr>
+         <section>
+            <h2>London Life: The Gallery</h2>
+            <div class="images">
+               <figure>
+                  <img src="images/bigben.jpg" alt="Big Ben">
+                  <figcaption><strong>Big Ben</strong> is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster.</figcaption>
+               </figure>
+               <figure>
+                  <img src="images/building.jpg" alt="London Building">
+                  <figcaption>The outside of <strong>Natural History Museum</strong> in London, which is a iconic landmark.</figcaption>
+               </figure>
+               <figure>
+                  <img src="images/garden.jpg" alt="garden">
+                  <figcaption>King William's Temple, a classical temple located within the Mediterranean Garden at <strong>Kew Gardens</strong> in London. </figcaption>
+               </figure>
+               <figure>
+                  <img src="images/gaurds.jpg" alt="The Guards">
+                  <figcaption>The Guards at <strong>Buckingham Palace</strong>. Buckingham Palace is the official London residence of the British monarch.</figcaption>
+               </figure>
+               <figure>
+                  <img src="images/museum.jpg" alt="Museum">
+                  <figcaption>Inside of the <strong>History Museum</strong> in London. Shows the exhibits and collections.</figcaption>
+               </figure>
+               <figure>
+                  <img src="images/street.jpg" alt="street">
+                  <figcaption>The streets of London, showcasing the city's vibrant atmosphere.</figcaption>
+               </figure>
+               <figure>
+                  <img src="images/tower.jpg" alt="tower">
+                  <figcaption>The <strong>Tower Bridge</strong> of London, a historic bridge on the north bank of the River Thames.</figcaption>
+               </figure>
+               <figure>
+                  <img src="images/tube.jpg" alt="The Tube">
+                  <figcaption>The <strong>Underground</strong>, commonly known as the Tube, is the rapid transit system of London.</figcaption>
+               </figure>
+               <figure>
+                  <img src="images/uk.jpg" alt="uk">
+                  <figcaption>Streets of London, showing the two tier bus system.</figcaption>
+               </figure>
+            </div>
          </section>
 
       </main>

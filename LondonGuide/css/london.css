@@ -1,11 +1,11 @@
 :root{
     --content-background-color: rgba(255,255,255, 0.85);
-    
+    --pagewidth: 90%;
 }
 
 * {
     
-    box-sizing: border-box; /* The CSS box-sizing property allows us to include the padding and  */
+    box-sizing: border-box; 
     
 }
 
@@ -24,13 +24,18 @@ header{
     margin-left: auto;
     margin-right: auto;
 }
+
 header > h1{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     margin-bottom: 20px;
 }
 
+h1, h2 {
+    font-family: 'sans-serif';
+    color: #000000;
+}
 
+/* Styling the navigation bar */
 nav > ul {
     margin: 0 auto;
     padding: 0;
@@ -46,11 +51,13 @@ nav > ul {
 
 nav > ul > li > a{
     color:black;
-    font-size: 20px;
+    font-size: 16px;
     font-family: serif;
     text-decoration: none;
     padding: 5px 15px;
-    transition: 0.3s;    
+    transition: 0.3s; 
+    display: block;
+    text-align: center;   
 }
 
 nav > ul > li > a:hover{
@@ -59,12 +66,12 @@ nav > ul > li > a:hover{
     border-radius: 3px;
 }
 
+/* Styling the main content area */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-
 
 main{
     background-color: rgba(255,255,255,0.75);
@@ -78,49 +85,11 @@ main{
     margin: 0px auto;
 }
 
-
-
-
-
-/* nav > ul > li > a{
-    color:black;
-    font-size: 14px;
-    font-family: serif;
-    text-decoration: none;
-    padding: 8px 12px;
-    border: 1px solid transparent;
-    transition: 0.3s;
-    display: block;
-    text-align: center;
+.about.text p {
+    line-height: 2;
 }
 
-nav > ul > li > a:hover{
-    background-color:#cc00ff;
-    color: white;
-    box-shadow: 0 0 10px #cc00ff;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Styling Neighborhood Explorer */
 .explorer-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -137,13 +106,16 @@ nav > ul > li > a:hover{
 .tablinks{
     padding: 15px;
     cursor: pointer;
-    background-color: #f1f1f1;
+    background-color: rgb(233, 113, 189);
     font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
 
 }
 
 .tablinks:hover {
-    background-color: #ddd;
+    background-color: rgb(210, 90, 160);
 }
 
 .inner-grid{
@@ -157,7 +129,6 @@ nav > ul > li > a:hover{
     width: 100%;
     border-radius: 8px;
 }
-
 
 /* Styling the packing list*/
 .prep-form {
@@ -178,18 +149,26 @@ nav > ul > li > a:hover{
 .prep-output {
     margin-top: 20px;
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border: 2px dashed #000;
+    border-radius: 15px;
+    min-height: 120px; 
 }
 
 .prep-output div {
     border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     font-family: sans-serif;
 }
 
 .prep-form input, 
 .prep-form select {
     padding: 8px;
-    margin-bottom: 15px; /* Adds breathing room between rows */
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -209,11 +188,11 @@ nav > ul > li > a:hover{
 }
 
 .box {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100px;
-    height: 100px;
+    height: 50px;
     margin: 15px;
     padding:10px;
     font-family: sans-serif;
@@ -253,7 +232,7 @@ nav > ul > li > a:hover{
 #submit {
     width: 100%;
     padding: 10px;
-    background-color: #333;
+    background-color: rgb(233, 113, 189);
     color: white;
     border: none;
     cursor: pointer;
@@ -263,7 +242,7 @@ nav > ul > li > a:hover{
 }
 
 #submit:hover {
-    background-color: rgb(233, 113, 189);
+    background-color: rgb(189, 78, 142);
 }
 
 #result {
@@ -271,4 +250,50 @@ nav > ul > li > a:hover{
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+}
+
+/* Styling the gallery */
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.5);
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.images figure {
+    margin: 0;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.images figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+
+}
+
+.images figure figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+
+
+footer{
+    background-color: var(--content-background-color);
+    width: var(--pagewidth);
+    height: auto;
+    border: 5px solid #ffffff; 
+    padding: 20px;
+    margin: 0px auto;
+    margin-top: 50px;
 }

@@ -1,0 +1,41 @@
+@import "london.css";
+
+/* Reset widths to fill the phone screen */
+header, main, footer, .prep-form, #quiz-container, .images {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* mobile navigation */
+nav > ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+/* mobile neighborhood explorer */
+.explorer-grid {
+    grid-template-columns: 1fr; 
+}
+
+.inner-grid {
+    grid-template-columns: 1fr; 
+}
+
+/* mobile packing list */
+.prep-output {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.prep-form label {
+    display: block; 
+    width: 100%;
+}
+
+/* mobile image gallery */
+.images {
+    grid-template-columns: 1fr; 
+}
